@@ -35,7 +35,9 @@ else:
 cpf2.append(v1)
 cpf2 = ''.join(cpf2)
 
-if cpf == cpf2:
+sequencia = cpf2 == str(cpf2[0]) * len(cpf)
+
+if cpf == cpf2 and not sequencia:
     print('CPF Válido.')
 else:
     print('CPF Inválido.')
@@ -62,7 +64,8 @@ for n in range(19):
         novo = 0
         novo_cpf += str(x)
 
-if cpf == novo_cpf:
+# Evita sequências. ex 111111111
+if cpf == novo_cpf :
     print('CPF Válido')
 else:
     print('CPF Inválido')"""
